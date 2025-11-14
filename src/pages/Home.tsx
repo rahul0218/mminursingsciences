@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Cpu, Atom, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+
 const heroImages = [
   '/images/Heroslider/IMG_15551-1024x589.jpg',
   '/images/Heroslider/BSc.jpg',
@@ -13,9 +14,7 @@ const heroImages = [
 
 
 const notices = [
-  { day: '25', month: 'JUL', title: 'Mid-term Examination Schedule', description: 'The schedule for the upcoming mid-term examinations for all departments has been published.' },
-  { day: '18', month: 'JUL', title: 'New Library Timings', description: 'The library will be operating under new extended hours starting from August 1st.' },
-  { day: '15', month: 'JUL', title: 'Scholarship Application Deadline', description: 'Last date for submission of scholarship applications is July 31st.' },
+  { day: '14', month: 'NOV', title: 'Prospectus', description: 'Download the prospectus for the institute', link: '/Prospectus.pdf' }
 ];
 
 const events = [
@@ -252,9 +251,10 @@ const Home = () => {
                   <div>
                     <h3 className="font-bold text-rich-black">{item.title}</h3>
                     <p className="text-sm text-slate-gray mt-1">{item.description}</p>
-                    <a href="#" className="text-sm font-semibold text-primary mt-2 inline-block">Read More &rarr;</a>
+                    <a href={item.link} className="text-sm font-semibold text-primary mt-2 inline-block" target="_blank">Read More &rarr;</a>
                   </div>
                 </div>
+                
               ))}
             </div>
           </div>
